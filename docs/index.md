@@ -6,11 +6,10 @@ Welcome! This page documents a full MC simulation and analysis workflow for cohe
 
 ## 💡 Overview
 
-- 💥 Event generation with [STARlight](https://starlight.hepforge.org/)
-- 🧮 Full CMS simulation: GENSIM → DIGIRAW → RECO
-- 🌟 Production of flat ntuple (diMuTree) for physics analysis
-- 📈 Mass fitting and yield extraction using RooFit
-- ✅ Written and validated by Albert Xu (Rice University)
+- Event generation with [STARlight](https://starlight.hepforge.org/)
+- Full CMS simulation: GENSIM → DIGIRAW → RECO
+- Production of flat ntuple (diMuTree) for physics analysis
+- Mass fitting and yield extraction using RooFit
 
 ---
 
