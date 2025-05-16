@@ -9,7 +9,6 @@ scram b -j8
 
 cmsenv # builds the environment
 
-# Do it only once
 +chmod genPythonCfg_cmsDriver.sh (do it only once)
 
 ./genPythonCfg_cmsDriver.sh
@@ -24,5 +23,5 @@ cd /afs/cern.ch/user/x/xuha/private/CMSSW_14_1_7/src/VertexCompositeAnalysis/Ver
 
 cmsRun PbPbSkimAndTree2023_DiMu_MC_ParticleAnalyzer_cfg.py
 
-# Then you should see something like
-diMu_ana_mc.root 
+## Then you should see something like
+diMu_ana_mc.root
