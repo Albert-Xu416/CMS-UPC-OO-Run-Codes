@@ -9,7 +9,7 @@ scram b -j8
 
 cmsenv # builds the environment
 
-+chmod genPythonCfg_cmsDriver.sh (do it only once)
+chmod +x genPythonCfg_cmsDriver.sh (do it only once)
 
 ./genPythonCfg_cmsDriver.sh
 
