@@ -4,7 +4,7 @@ Welcome! This page documents a full MC simulation and analysis workflow for cohe
 
 ---
 
-## 💡 Overview
+## Overview
 
 - Event generation with [STARlight](https://starlight.hepforge.org/)
 - Full CMS simulation: GENSIM → DIGIRAW → RECO
@@ -13,7 +13,7 @@ Welcome! This page documents a full MC simulation and analysis workflow for cohe
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 | Folder              | Contents                                       |
 |---------------------|------------------------------------------------|
@@ -23,7 +23,7 @@ Welcome! This page documents a full MC simulation and analysis workflow for cohe
 
 ---
 
-## 🔧 Technologies Used
+## Technologies Used
 
 - [STARlight](https://starlight.hepforge.org/)
 - [CMSSW](https://github.com/cms-sw/cmssw)
@@ -31,7 +31,7 @@ Welcome! This page documents a full MC simulation and analysis workflow for cohe
 
 ---
 
-## 🙋‍♂️ Author
+## Author
 
 **Haozhen (Albert) Xu**  
 B.S. in Physics & Mathematics, Rice University  
