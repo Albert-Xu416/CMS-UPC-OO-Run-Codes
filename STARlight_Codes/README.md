@@ -28,5 +28,8 @@ vim convert_SL2LHE.C (This is the code that converts the .out file to .lhe file,
 
 root -l -b -q 'convert_SL2LHE.C("/Users/albertxu/Desktop/STARlight_Folder/starlight_r313/build/slight.out")' (This converts the .lhe file)
 
-* Then you are going to see a .lhe file -- starlight_LHEtest.lhe for me -- now put it into lxplus, then see the MC simulation part
-scp /Users/albertxu/Desktop/STARlight_Folder/starlightLHE-master/generateLHE xuha@lxplus.cern.ch:~/private/
+* Then you are going to see a .lhe file -- starlight_LHEtest.lhe for me -- now put it into /eos/cms/store/group/phys_heavyions -- the CMS system in the cluster.
+
+xrdcp -f (your address here)starlight_LHEtest.lhe root://eosuser.cern.ch//eos/cms/store/group/phys_heavyions/xuha/lhefiles_0516/starlight_LHEtest.lhe
+
+eos ls /eos/cms/store/group/phys_heavyions/xuha/lhefiles_0516 (you can check if your file is actually inside the folder)
