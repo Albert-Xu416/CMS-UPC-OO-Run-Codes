@@ -36,7 +36,7 @@ Welcome! This page documents a full MC simulation and analysis workflow for cohe
 
 **Haozhen (Albert) Xu**  
 B.S. in Physics & Mathematics, Rice University  
-📧 Email: your.email@rice.edu  
+📧 Email: hx28@rice.edu  
 🔗 [GitHub Profile](https://github.com/Albert-Xu416)
 
 ---
