@@ -10,7 +10,9 @@ cmsenv # builds the environment
 
 ./genPythonCfg_cmsDriver.sh
 cmsRun step1_STARlight_LHE_GenSim_cfg.py
+
 cmsRun step2_STARlight_Digi_cfg.py
+
 cmsRun step3_STARlight_Reco_cfg.py
 
 cd /afs/cern.ch/user/x/xuha/private/CMSSW_14_1_7/src/VertexCompositeAnalysis/VertexCompositeProducer/test
