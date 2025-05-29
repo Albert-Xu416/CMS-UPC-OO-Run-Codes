@@ -11,4 +11,8 @@
 
 gsplit -l ${totalLines} ${dir}/slight.${specName}.out  --numeric-suffixes=1  -a 4   ${dir}/splitFiles/slight_${specName}_  --additional-suffix=.out
 
-./splitSTARlight.sh 4000 CohJpsi (Run it in generateLHE)
+./splitSTARlight.sh 4000 CohJpsi (Run it in generateLHE, it creates 4000 lines per file, and store them in file CohJpsi)
+
+/Users/albertxu/Desktop/STARlight_Folder/starlightLHE-master/generateLHE/CohJpsi/splitFiles (Now by the code, all the splitted files are given at this location)
+
+
