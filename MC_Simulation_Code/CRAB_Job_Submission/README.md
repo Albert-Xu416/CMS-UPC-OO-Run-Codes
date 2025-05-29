@@ -14,4 +14,4 @@ gsplit -l ${totalLines} ${dir}/slight.${specName}.out  --numeric-suffixes=1  -a 
 
 /Users/albertxu/Desktop/STARlight_Folder/starlightLHE-master/generateLHE/CohJpsi/splitFiles (Now by the code, all the splitted files are given at this location)
 
-
+## Now you have these files
