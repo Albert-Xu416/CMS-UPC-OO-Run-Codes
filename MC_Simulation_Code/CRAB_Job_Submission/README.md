@@ -14,4 +14,9 @@ gsplit -l ${totalLines} ${dir}/slight.${specName}.out  --numeric-suffixes=1  -a 
 
 /Users/albertxu/Desktop/STARlight_Folder/starlightLHE-master/generateLHE/CohJpsi/splitFiles (Now by the code, all the splitted files are given at this location)
 
-## Now you have these files
+## Now you have these files, convert them into .lhe files individually
+(First go to directory generateLHE (where the conversion code exists convert_SL2LHE.C))
+
+for file in splitFiles/*.txt; do
+  root -l -b -q "convert_SL2LHE.C(\"$file\")"
+done
