@@ -30,3 +30,15 @@ cd /afs/cern.ch/user/x/xuha/Inc_lheFiles
 for file in *.lhe; do
   xrdcp "$file" root://eosuser.cern.ch//eos/cms/store/group/phys_heavyions/xuha/lheFiles_0531/
 done
+
+## Now we are ready submit the crab job
+(First you need to make a filelist.txt with the names that is needed filelist.txt, below is an examplar code)
+
+for i in $(seq -w 1 2000); do
+
+  echo "/store/group/phys_heavyions/xuha/lheFiles_0531/slight_InCohJpsi_$i.lhe"
+  
+done > filelist.txt
+
+(Next we need to adjust this crab configuration file, an example is in the file), we need different one for different jobs
+
