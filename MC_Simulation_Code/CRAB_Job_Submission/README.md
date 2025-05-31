@@ -23,3 +23,10 @@ gsplit -l ${totalLines} ${dir}/slight.${specName}.out  --numeric-suffixes=1  -a 
 
 scp -r /Users/albertxu/Desktop/STARlight_Folder/starlightLHE-master/generateLHE/InCohJpsi/Inc_lheFiles xuha@lxplus.cern.ch:~
 
+cd /afs/cern.ch/user/x/xuha/Inc_lheFiles
+
+(Now copy them into the eos address)
+
+for file in *.lhe; do
+  xrdcp "$file" root://eosuser.cern.ch//eos/cms/store/group/phys_heavyions/xuha/lheFiles_0531/
+done
