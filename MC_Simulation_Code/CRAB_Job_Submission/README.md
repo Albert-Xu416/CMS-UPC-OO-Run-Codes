@@ -17,6 +17,9 @@ gsplit -l ${totalLines} ${dir}/slight.${specName}.out  --numeric-suffixes=1  -a 
 ## Now you have these files, convert them into .lhe files individually
 (First go to directory generateLHE (where the conversion code exists convert_SL2LHE.C))
 
-for file in splitFiles/*.txt; do
-  root -l -b -q "convert_SL2LHE.C(\"$file\")"
-done
+./convertLHE.sh CohJpsi
+
+(Now copy all the events to your lxplus, and you are going to see this folder in your lxplus desktop)
+
+scp -r /Users/albertxu/Desktop/STARlight_Folder/starlightLHE-master/generateLHE/InCohJpsi/Inc_lheFiles xuha@lxplus.cern.ch:~
+
