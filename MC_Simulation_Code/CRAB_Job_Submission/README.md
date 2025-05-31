@@ -40,5 +40,40 @@ for i in $(seq -w 1 2000); do
   
 done > filelist.txt
 
-(Next we need to adjust this crab configuration file, an example is in the file), we need different one for different jobs
+(Next we need to adjust this crab configuration file, an example is in the file, we need different one for different jobs, note make sure the python file you are running is in your current directory and also the filelist you produced. You are ready to submit the crabjob)
 
+scram b -j8
+cmsenv
+crab submit --config=crabConfig1.py
+
+## Likely Output
+Success: Your task has been delivered to the prod CRAB3 server.
+Task name: 250531_192006:xuha_crab_STARlight_CohJpsiToMuMu_GenSim_132X_250531_211918
+Project dir: crab_projects/crab_STARlight_CohJpsiToMuMu_GenSim_132X_250531_211918
+Please use ' crab status -d crab_projects/crab_STARlight_CohJpsiToMuMu_GenSim_132X_250531_211918 ' to check how the submission process proceeds.
+
+## Now for step2/step3
+
+(First find the generated root files address, an example is the following code, and you generate the filelist likewise)
+
+LFN_BASE=/store/group/phys_heavyions/xuha/1_output_files_0531/STARlight_CohJpsiToMuMu_GenSim_132X_250531_211918/CRAB_UserFiles/STARlight_CohJpsiToMuMu_GenSim_132X_250531_211918
+
+for i in $(seq 1 2000); do
+
+  if [ $i -le 999 ]; then
+  
+    echo "${LFN_BASE}/0000/step1_STARlight_LHE_GenSim_${i}.root"
+    
+  elif [ $i -le 1999 ]; then
+  
+    echo "${LFN_BASE}/0001/step1_STARlight_LHE_GenSim_${i}.root"
+    
+  else
+  
+    echo "${LFN_BASE}/0002/step1_STARlight_LHE_GenSim_${i}.root"
+    
+  fi
+  
+done > 2_output_filelist.txt
+
+crab submit --config=crabConfig2.py
