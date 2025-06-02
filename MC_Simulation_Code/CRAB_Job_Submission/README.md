@@ -56,7 +56,7 @@ Please use ' crab status -d crab_projects/crab_STARlight_CohJpsiToMuMu_GenSim_13
 
 (First find the generated root files address, an example is the following code, and you generate the filelist likewise)
 
-LFN_BASE=/store/group/phys_heavyions/xuha/1_output_files_0531/STARlight_CohJpsiToMuMu_GenSim_132X_250531_211918/CRAB_UserFiles/STARlight_CohJpsiToMuMu_GenSim_132X_250531_211918
+LFN_BASE=/store/group/phys_heavyions/xuha/1_output_files_0531/STARlight_CohJpsiToMuMu_GenSim_132X_250531_211918/CRAB_UserFiles/STARlight_CohJpsiToMuMu_GenSim_132X_250531_211918/250531_192006
 
 for i in $(seq 1 2000); do
 
