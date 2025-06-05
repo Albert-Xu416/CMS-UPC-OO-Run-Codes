@@ -28,7 +28,9 @@ cd /afs/cern.ch/user/x/xuha/Inc_lheFiles
 (Now copy them into the eos address)
 
 for file in *.lhe; do
+
   xrdcp "$file" root://eosuser.cern.ch//eos/cms/store/group/phys_heavyions/xuha/lheFiles_0531/
+  
 done
 
 ## Now we are ready submit the crab job
