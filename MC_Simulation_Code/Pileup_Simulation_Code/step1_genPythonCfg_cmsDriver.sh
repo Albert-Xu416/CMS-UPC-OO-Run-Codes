@@ -1,22 +1,25 @@
 cmsDriver.py Configuration/GenProduction/python/HINPbPbAutumn18GS_STARlight_fragment.py \
---filein /store/group/phys_heavyions/xuha//0619_PU_Simulation/CohJpsi_lheFiles/slight_CohJpsi_0006.lhe \
+--filein /store/group/phys_heavyions/xuha/0619_PU_Simulation/CohJpsi_lheFiles/slight_CohJpsi_0006.lhe \
 --filetype LHE \
---fileout file:step1_output_files/step1_0006_OO.root \
+--fileout file:/afs/cern.ch/user/x/xuha/CMSSW_15_0_8/src/step1_PU_output_files/step1_0006_OO.root \
+--pileup_input filelist:/afs/cern.ch/user/x/xuha/CMSSW_15_0_8/src/pu_filelist.txt \
 --mc \
 --eventcontent RAWSIM \
---no_exec \
 --datatier GEN-SIM \
---conditions 150X_mcRun3_2025_forOO_realistic_v5 \
+--conditions 141X_mcRun3_2024_realistic_HI_v14 \
 --beamspot DBrealistic \
 --step GEN,SIM \
 --nThreads 1 \
 --scenario HeavyIons \
 --geometry DB:Extended \
 --era Run3_2025_OXY \
---python_filename step1_STARlight_LHE_GenSim_cfg_PU.py \
---no_exec --customise Configuration/DataProcessing/Utils.addMonitoring -n 1000
+--python_filename /afs/cern.ch/user/x/xuha/CMSSW_15_0_8/src/RunFiles/step1_STARlight_LHE_GenSim_cfg.py \
+--no_exec \
+--customise Configuration/DataProcessing/Utils.addMonitoring \
+-n 1000
 
 cmsDriver.py Configuration/GenProduction/python/MinBias_Hijing_OO_5362GeV.py \
+  --filein file:step1_PU_output_files/step1_0006_OO.root \
   --fileout file:step2_output_files/step2_0006_OO.root \
   --mc --eventcontent RAWSIM \
   --datatier GEN-SIM \
@@ -27,7 +30,7 @@ cmsDriver.py Configuration/GenProduction/python/MinBias_Hijing_OO_5362GeV.py \
   --scenario HeavyIons \
   --geometry DB:Extended \
   --era Run3_2025_OXY \
-  --pileup_input "dbs:MinBias_Hijing_b015_OO_5362GeV/wangj-GENSIM_250526_1506p1_Nominal2025OOCollision-4895bd9726fb18692563bbed400e94f9/USER" \
+  --pileup_input filelist:pu_filelist.txt
   --pileup HiMixGEN \
   --python_filename step2_STARlight_GENSIM_PU_cfg.py \
   --customise Configuration/DataProcessing/Utils.addMonitoring \
