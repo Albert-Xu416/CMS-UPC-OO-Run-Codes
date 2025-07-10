@@ -51,3 +51,18 @@ cmsDriver.py \
 --no_exec \
 -n 500 \
 --nThreads 8
+
+cmsDriver.py step4 \
+--filein file:/afs/cern.ch/user/x/xuha/CMSSW_15_0_8/src/PU_Output_Files/Step3/step3_PU_0010_OO.root \
+--fileout file:/afs/cern.ch/user/x/xuha/CMSSW_15_0_8/src/PU_Output_Files/Step4/step4_PU_0010_OO.root \
+--mc \
+--eventcontent AODSIM \
+--datatier AODSIM \
+--conditions 150X_mcRun3_2025_forOO_realistic_v5 \
+--step RAW2DIGI,L1Reco,RECO \
+--era Run3_2025_OXY \
+--customise_commands "process.AODSIMoutput.outputCommands.extend(['keep *_mix_MergedTrackTruth_*', 'keep *Link*_simSiPixelDigis__*', 'keep *Link*_simSiStripDigis__*', 'keep *_generalTracks__*', 'keep *_hiConformalPixelTracks__*', 'keep *_siPixelClusters__*', 'keep *_siStripClusters__*'])" \
+--python_filename /afs/cern.ch/user/x/xuha/CMSSW_15_0_8/src/PU_RunFiles/step4_STARlight_PAT_cfg.py \
+--no_exec \
+-n 500 \
+--nThreads 8 \
